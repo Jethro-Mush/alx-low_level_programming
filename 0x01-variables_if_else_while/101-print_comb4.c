@@ -1,7 +1,6 @@
 /*
- * File: 101-print_comb4.c
- * Auth: Jethro Mushilingwa 
- */ 
+* File: 101-print_comb4.c 
+*/ 
 #include <stdio.h>
 
 /**
