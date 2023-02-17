@@ -1,8 +1,7 @@
 /*
  * File: 101-print_comb4.c
- * Auth: Brennan D Baraban
- */
-
+ * Auth: Jethro Mushilingwa 
+ */ 
 #include <stdio.h>
 
 /**
@@ -27,7 +26,6 @@ int main(void)
 
 				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
 					continue;
-				
 				putchar(',');
 				putchar(' ');
 			}
