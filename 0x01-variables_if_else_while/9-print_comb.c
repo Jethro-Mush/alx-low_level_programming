@@ -1,3 +1,8 @@
+/*
+ * File: 9-print_comb.c
+ * Author: Jethro Mushilingwa
+ */
+
 #include <stdio.h>
 
 /**
