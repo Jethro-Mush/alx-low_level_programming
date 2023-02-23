@@ -8,9 +8,11 @@
 /**
  * C PROGRAMMING
  */
-int _isupper(int c)
+int main()
 {
-	if (c >= 'A' && c <= 'Z')
+	char c;
+	c = 'C';
+	if (isupper(c))
 		return (1);
 
 	else
