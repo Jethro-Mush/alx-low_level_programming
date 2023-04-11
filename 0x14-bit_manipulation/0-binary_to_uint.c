@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * binary_to_uint - Convert a binary string to an unsigned integer.
  *
@@ -31,14 +30,11 @@ unsigned int binary_to_uint(const char *b)
 		{
 			return (0);
 		}
-
 		/* If the current binary digit is 1, add the corresponding power of 2 to the unsigned integer */
 		if (b[len] & 1)
 		{
 			ui += base_two;
 		}
 	}
-
 	return (ui);
 }
-
