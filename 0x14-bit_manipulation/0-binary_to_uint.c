@@ -1,23 +1,26 @@
 #include "main.h"
 
 /**
-converts a binary number to an
+ * binary_to_uint - converts a binary number to an
+ * unsigned int.
+ * @b: binary.
+ *
+ * Return: unsigned int.
  */
-unsigned int binary_to_
-nt(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
-	unsigned int x;
-	int len, binary;
+	unsigned int ui;
+	int len, base_two;
 
 	if (!b)
 		return (0);
 
-	x = 0;
+	ui = 0;
 
 	for (len = 0; b[len] != '\0'; len++)
 		;
 
-	for (len--, binary = 1; len >= 0; len--, binary *= 2)
+	for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
 	{
 		if (b[len] != '0' && b[len] != '1')
 		{
@@ -26,10 +29,9 @@ nt(const char *b)
 
 		if (b[len] & 1)
 		{
-			x += binary;
+			ui += base_two;
 		}
 	}
 
-	return (x);
+	return (ui);
 }
-
