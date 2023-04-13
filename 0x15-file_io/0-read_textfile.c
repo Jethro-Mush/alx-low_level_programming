@@ -1,35 +1,36 @@
 #include "main.h"
+
 /**
- * read_and_print_text_file - Reads a text file and prints its contents.
- * @file_path: The path to the file to read.
- * @max_chars: The maximum number of characters to print.
+ * read_textfile - reads a text file and prints the letters
+ * @filename: filename.
+ * @letters: numbers of letters printed.
  *
- * Return: The number of characters printed. If it fails, returns 0.
+ * Return: numbers of letters printed. It fails, returns 0.
  */
-ssize_t read_and_print_text_file(const char *file_path, size_t max_chars)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int file_descriptor;
-    ssize_t chars_read, chars_written;
-    char *buffer;
+	int fd;
+	ssize_t nrd, nwr;
+	char *buf;
 
-    if (!file_path)
-        return (0);
+	if (!filename)
+		return (0);
 
-    file_descriptor = open(file_path, O_RDONLY);
+	fd = open(filename, O_RDONLY);
 
-    if (file_descriptor == -1)
-        return (0);
+	if (fd == -1)
+		return (0);
 
-    buffer = malloc(sizeof(char) * max_chars);
-    if (!buffer)
-        return (0);
+	buf = malloc(sizeof(char) * (letters));
+	if (!buf)
+		return (0);
 
-    chars_read = read(file_descriptor, buffer, max_chars);
-    chars_written = write(STDOUT_FILENO, buffer, chars_read);
+	nrd = read(fd, buf, letters);
+	nwr = write(STDOUT_FILENO, buf, nrd);
 
-    close(file_descriptor);
+	close(fd);
 
-    free(buffer);
+	free(buf);
 
-    return (chars_written);
+	return (nwr);
 }
