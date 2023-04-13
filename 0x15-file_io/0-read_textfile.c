@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
- * read_and_print_text_file - reads a text file and prints its contents
- * @file_path: the path to the file to read
- * @max_chars: the maximum number of characters to print
+ * read_and_print_text_file - Reads a text file and prints its contents.
+ * @file_path: The path to the file to read.
+ * @max_chars: The maximum number of characters to print.
  *
- * Return: the number of characters printed. If it fails, returns 0.
+ * Return: The number of characters printed. If it fails, returns 0.
  */
 ssize_t read_and_print_text_file(const char *file_path, size_t max_chars)
 {
@@ -34,4 +33,3 @@ ssize_t read_and_print_text_file(const char *file_path, size_t max_chars)
 
     return (chars_written);
 }
-
